@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "General Sans";
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+#mini-circle{ /*circle following our ptr*/
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s; /*thoda smoothly 1s peecha follow kre*/
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: 999999;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.bounding{  /*to get the text to flow up*/
+    width: fit-content;
+    overflow: hidden; /*initially neecha chupa hoga tb dont show*/
+}
+.bounding-elem{
+    transform: translateY(100%); /*y axis ka around 100% upar aya
+}
+#main{
+    width: 100%; /*initially ht nhi ptga kitna scroll hoga*/
+}
+
+#hero{ /*phla page*/
+    width: 100%;
+    height: 100vh; /*hmari screen(vh) k total size*/
+    background-color: black;
+    color: white;
+    position: relative;/*relative to herofooter*/
+}
+
+#nav{
+    display: flex; /*ek hi line m elements*/
+    align-items: center; /*y axis ka along beecg m*/
+    justify-content: space-between; /*x axis ka along elemnts ka beech m gap*/
+    width: 100%;
+    padding: 20px 40px;
+    color: white;
+}
+
+#nav a{
+    text-decoration: none; /*link ka neecha underline hatao*/
+    color: white;
+}
+#heading{
+    margin-top: 90px;
+}
+
+#heading h1{ /*PRODUCT ka styling*/
+    font-size: 10vw; /*vw ma dene sa window width km krna pr text bhi adjust hojayega*/
+    font-weight: 900;
+    opacity: .6;
+    margin-left: 30px;
+    line-height: 1;
+}
+#heading #secondh1{ /*DESIGN ka styling (aga khiskao in ref to product*/
+    margin-left: 230px;
+}
+
+.blocktext{
+    width: fit-content;
+    display: flex; /*y axis ka along flex(ek hi y line pr*/
+    flex-direction: column;
+    align-items: end; /*towrds right*/
+
+}
+.blocktext h5{ /*based in toronto desihner ka kona ma hoga so aloign right*/
+    text-align: right;
+    font-size: 15px;
+}
+
+#chotiheadings{
+    margin-top: 100px;
+    padding-right: 50px; /*size ma krna ka lia*/
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+#chotiheadings h5{
+    margin-top:.5vw ;
+    text-align:right ;
+    font-size: 1vw;
+
+}
+#herofooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute; /*to the hero*/
+    bottom: 3%;
+    padding: 0 2vw;
+    width: 100%;
+}
+#herofooter a{
+    color: white;
+    text-decoration: none;
+}
+#herofooter #iconset{ 
+    display: flex;
+    gap: 5px;
+}
+#herofooter .circle{  /*circle comtaing arrow in footer*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+#second{ /*second page*/
+    padding-right: 10vw;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    padding-top: 200px; /*hero page ka beech gap*/
+    color: white;
+}
+
+.elem{
+    width: 100%;
+    border-top: 1px solid #888;
+    padding: 3.5vw 3vw;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /*relative to elem its image is abs(uska upar)*/
+}
+
+.elem h1{
+    font-size: 7.6vw;
+    opacity: .7;
+}
+.elemlast{ /*uska neecha bhi order dalna h islia alg sa class*/
+    border-bottom: 1px solid #888;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.elem img{
+    position: absolute;
+    z-index: 999; /*taki img text ka upar aya*/
+    height: 120%; /*elem ka size sa badi h*/
+    position: absolute;
+    transform: translate(-50%,-50%);
+    opacity: 0; /*iniyially not visible on hovering mouse opacity becomes 1*/
+}
+#about{
+  width: 100%;
+  padding: 10vw 10vw;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 50px; /*gap btw img and text*/
+  padding-left: 40vw; /*right shift krna ka lia*/
+  margin-top: 300px;
+}
+#about img{
+    width: 15vw;
+}
+#textabout{
+    width: 25rem;
+}
+#textabout h5{
+    opacity: .6;
+    margin-bottom: 10px; /*para aur heading beech space*/
+}
+#textabout p{
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+#textabout a{
+    padding: 12px 22px;
+    border: 1px solid white;
+    border-radius: 100px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#subscribe{
+    color: white;
+    padding: 20px 30px;
+    padding-bottom: 7vw;
+}
+#subscribe h5{
+    opacity: .6;
+}
+#subscribe h3{
+    font-size: 14px;
+    margin-top: 10px;
+}
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 30px;
+    color: white;
+}
+#footer a{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+}
+#footer-right{
+    display: flex;
+    gap: 30px;
+}
